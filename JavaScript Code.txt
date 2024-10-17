@@ -1,0 +1,23 @@
+JavaScript Code:
+
+// script.js
+
+let students = [];
+
+// Register student functionality
+document.getElementById('register-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const rollNo = document.getElementById('roll-no').value;
+    const course = document.getElementById('course').value;
+    const student = {
+        name,
+        email,
+        rollNo,
+        course
+    };
+    students.push(student);
+    displayStudents();
+});
+
